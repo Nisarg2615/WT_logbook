@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-primary antialiased font-sans;
+  }
+}
+
+@layer components {
+  .industrial-card {
+    @apply bg-card rounded-lg shadow-card border border-border p-6;
+  }
+  
+  .industrial-input {
+    @apply flex h-10 w-full rounded-md border border-border bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors disabled:opacity-50;
+  }
+  
+  .industrial-btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground font-medium h-10 px-4 py-2 hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+  
+  .industrial-btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-secondary text-secondary-foreground font-medium h-10 px-4 py-2 hover:bg-secondary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+  
+  .industrial-btn-accent {
+    @apply inline-flex items-center justify-center rounded-md bg-accent text-accent-foreground font-medium h-10 px-4 py-2 hover:bg-accent/90 transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .industrial-btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-border bg-transparent font-medium h-10 px-4 py-2 hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-border focus:ring-offset-2;
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+}
